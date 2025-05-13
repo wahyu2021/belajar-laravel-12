@@ -124,27 +124,45 @@ return [
     ],
 
     'providers' => [
-        /*
-         * Laravel Framework Service Providers...
-         */
-        Illuminate\Auth\AuthServiceProvider::class,
-        Illuminate\Broadcasting\BroadcastServiceProvider::class,
-        Illuminate\Bus\BusServiceProvider::class,
-        Illuminate\Cache\CacheServiceProvider::class,
-        Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
-        Illuminate\Cookie\CookieServiceProvider::class,
-        Illuminate\Database\DatabaseServiceProvider::class,
-        Illuminate\Encryption\EncryptionServiceProvider::class,
-        Illuminate\Filesystem\FilesystemServiceProvider::class,
-        Illuminate\Foundation\Providers\FormRequestServiceProvider::class,
-        Illuminate\Foundation\Providers\FoundationServiceProvider::class,
-        Illuminate\Hashing\HashServiceProvider::class,
-        Illuminate\Mail\MailServiceProvider::class,
-        Illuminate\Notifications\NotificationServiceProvider::class,
-        Illuminate\Pagination\PaginationServiceProvider::class,
-        Illuminate\Queue\QueueServiceProvider::class,
-        Illuminate\Session\SessionServiceProvider::class,
-        App\Providers\FooBarServiceProvider::class,     
-    ],
+    /*
+     * Laravel Framework Service Providers...
+     */
+    Illuminate\Auth\AuthServiceProvider::class,
+    Illuminate\Broadcasting\BroadcastServiceProvider::class,
+    Illuminate\Bus\BusServiceProvider::class,
+    Illuminate\Cache\CacheServiceProvider::class,
+    Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+    Illuminate\Cookie\CookieServiceProvider::class,
+    Illuminate\Database\DatabaseServiceProvider::class,
+    Illuminate\Encryption\EncryptionServiceProvider::class,
+    Illuminate\Filesystem\FilesystemServiceProvider::class,
+    Illuminate\Foundation\Providers\FormRequestServiceProvider::class,
+    Illuminate\Foundation\Providers\FoundationServiceProvider::class,
+    Illuminate\Hashing\HashServiceProvider::class,
+    Illuminate\Mail\MailServiceProvider::class,
+    Illuminate\Notifications\NotificationServiceProvider::class,
+    Illuminate\Pagination\PaginationServiceProvider::class,
+    Illuminate\Queue\QueueServiceProvider::class,
+    Illuminate\Session\SessionServiceProvider::class,
+    Illuminate\Translation\TranslationServiceProvider::class, // Pastikan ini juga ada jika dibutuhkan
+    Illuminate\Validation\ValidationServiceProvider::class, // Pastikan ini juga ada jika dibutuhkan
+    Illuminate\View\ViewServiceProvider::class, // <--- TAMBAHKAN BARIS INI
+
+    /*
+     * Package Service Providers...
+     */
+    // Di sini biasanya package provider
+
+    /*
+     * Application Service Providers...
+     */
+    App\Providers\AppServiceProvider::class, // Biasanya ini ada
+    // App\Providers\AuthServiceProvider::class, // Biasanya ini ada
+    // // App\Providers\BroadcastServiceProvider::class, // Opsional
+    // App\Providers\EventServiceProvider::class, // Biasanya ini ada
+    // App\Providers\RouteServiceProvider::class, // Biasanya ini ada
+    App\Providers\FooBarServiceProvider::class, // Provider kustom Anda
+
+],
 
 ];
