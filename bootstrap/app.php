@@ -11,7 +11,16 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->validateCsrfTokens(except: [
+            'input/*',
+            'file/*'
+            // Anda bisa menambahkan lebih banyak rute di sini
+        ]);
+        $middleware->encryptCookies(except: [
+            'input/*',
+            'file/*'
+            // Anda bisa menambahkan lebih banyak rute di sini
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
